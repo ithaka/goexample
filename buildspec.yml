@@ -5,7 +5,7 @@ phases:
     commands:
       - export GITSHA1="${CODEBUILD_RESOLVED_SOURCE_VERSION}"
       - export GITHEAD="$(echo $GITSHA1 | cut -c1-7)"
-      - export GITURL='git@github.com:StevenACoffman/dummy.git'
+      - export GITURL='git@github.com:StevenACoffman/goexample.git'
       - export USER=codebuild
       - export GITSTATUS="no changes"
       - echo "Creating scm-source.json"
@@ -22,4 +22,4 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push artifactory.acorn.cirrostratus.org/cypress/dummy
+      - make docker-push

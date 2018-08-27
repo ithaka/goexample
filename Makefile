@@ -10,7 +10,7 @@ GOFLAGS   :=
 BINDIR    := $(CURDIR)/bin
 
 .PHONY: all
-all: build
+all: clean docker-binary docker-build docker-push
 
 .PHONY: build
 build:
