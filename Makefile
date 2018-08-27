@@ -1,5 +1,5 @@
-DOCKER_REGISTRY   ?= docker.io
-IMAGE_PREFIX      ?= enricofoltran
+DOCKER_REGISTRY   ?= artifactory.acorn.cirrostratus.org
+IMAGE_PREFIX      ?= cypress
 SHORT_NAME        ?= simple-go-server
 
 # build options
