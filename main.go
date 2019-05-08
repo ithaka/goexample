@@ -18,17 +18,18 @@ const (
 	requestIDKey key = 0
 )
 
+// Version and other app metadata
 var (
-	Version      string = ""
-	GitTag       string = ""
-	GitCommit    string = ""
-	GitTreeState string = ""
+	Version      string
+	GitTag       string
+	GitCommit    string
+	GitTreeState string
 	listenAddr   string
 	healthy      int32
 )
 
 func main() {
-	flag.StringVar(&listenAddr, "listen-addr", ":5000", "server listen address")
+	flag.StringVar(&listenAddr, "listen-addr", ":80", "server listen address")
 	flag.Parse()
 
 	logger := log.New(os.Stdout, "http: ", log.LstdFlags)
