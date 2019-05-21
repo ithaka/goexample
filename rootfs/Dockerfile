@@ -12,6 +12,6 @@ COPY --from=builder /etc/passwd /etc/passwd
 
 COPY simple-go-server /simple-go-server
 
-USER app
+USER root
 
 ENTRYPOINT ["/simple-go-server"]
